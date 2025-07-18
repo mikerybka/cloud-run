@@ -60,15 +60,15 @@ runcmd:
 
 	reqBody := CreateServerRequest{
 		Name:       name,
-		ServerType: "cpx11",     // cheap & small
-		Image:      "debian-12", // valid image name
-		Location:   "ash",       // Ashburn, VA
+		ServerType: "cpx11",
+		Image:      "debian-12",
+		Location:   "ash", // Ashburn, VA
 		SSHKeys: []string{
 			"laptop",
 			"android",
 			"beelink",
 			"beelink2",
-		}, // must exist in your account
+		},
 		StartAfterCreate: true,
 		UserData:         cloudInit,
 	}
